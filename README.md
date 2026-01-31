@@ -1,90 +1,44 @@
-# Student Management System
 
-A simple Student Management System built with Spring Boot, Java, and H2 Database. This application allows for managing student records including adding, viewing, updating, and deleting students.
+# Student Management System (EduManage)
 
-## Features
+Student Management System built with Java, Spring Boot, and H2 Database. This application provides a clean, responsive web interface for administrators to manage student records efficiently.
 
-- **Admin Login**: Secure access for administrators.
-- **Student Management**:
-  - View all students
-  - Add new students
-  - Update existing student details
-  - Delete student records
-- **H2 Database**: Uses an in-memory database for easy setup and testing.
+## Features:
 
-## Technologies Used
+- Complete CRUD Operations:
+  1. Add: Create new student profiles with details like name, email, course, and age.
+  2. View: Dynamically rendered table of all students.
+  3. Search: Real-time search by Student ID or Name.
+  4. Edit: Modify existing student information
+  5. Delete: Remove student records from the database.
+- In-Memory Database: Uses H2 database for rapid development and easy testing without external setup.
 
-- **Java**: JDK 17
-- **Spring Boot**: 3.2.2
-  - Spring Web
-  - Spring Data JPA
-- **Database**: H2 (In-memory)
-- **Tooling**: Maven, Lombok
+## Technologies:
+
+1. Backend:
+- Java 17
+- Spring Boot 3.2.2
+- Spring Data JPA
+- Lombok
+2. Frontend:
+- HTML5 & CSS3 
+- Vanilla JavaScript 
+3. Database: H2 (In-memory)
+4. Build Tool: Maven
 
 ## Prerequisites
 
-- Java 17 or higher
-- Maven 3.6 or higher
+- Java: JDK 17 or higher
+- Maven
+- IDE: IntelliJ IDEA 
 
-## Getting Started
+## Installation & Setup
 
-### 1. Clone the Repository
+1. Clone the Repository
+2. Build and Run
+   -Using Maven
 
-```bash
-git clone <repository-url>
-cd student-management-system
-```
-
-### 2. Build the Project
-
-```bash
-mvn clean install
-```
-
-### 3. Run the Application
-
-```bash
-mvn spring-boot:run
-```
-
-The application will start on **port 8080**.
-
-## API Endpoints
-
-Base URL: `http://localhost:8080/api`
-
-### Authentication
-- **POST** `/login`
-  - Body: `{ "username": "admin", "password": "admin123" }`
-
-### Students
-- **GET** `/students` - Get all students
-- **GET** `/students/{id}` - Get student by ID
-- **POST** `/students` - Create a new student
-- **PUT** `/students/{id}` - Update a student
-- **DELETE** `/students/{id}` - Delete a student
-
-## H2 Database Console
-
-You can access the H2 database console to view data directly.
-
-- **URL**: [http://localhost:8080/h2-console](http://localhost:8080/h2-console)
-- **JDBC URL**: `jdbc:h2:mem:smsdb`
-- **Username**: `sa`
-- **Password**: `password`
-
-## Project Structure
-
-```
-src
-├── main
-│   ├── java
-│   │   └── com.sms
-│   │       ├── controller  # API Controllers
-│   │       ├── model       # JPA Entities
-│   │       ├── repository  # Data Access Layer
-│   │       └── service     # Business Logic
-│   └── resources
-│       ├── application.properties # Configuration
-│       └── static      # Static assets (HTML/CSS)
-```
+         mvn clean install
+         mvn spring-boot:run
+3. In IntelliJ IDEA : Right-click `StudentManagementApplication.java` and select Run
+4. Access the Application : http://localhost:8080 in your browser.
